@@ -1,6 +1,6 @@
 # Aura Coffee — Welcome Email
 
-A coded HTML welcome email for Aura Coffee's waitlist, built with MJML and automated through a live Klaviyo flow. Part of the broader [Aura Coffee waitlist landing page](your-main-repo-link-here) project.
+A coded HTML welcome email for Aura Coffee's waitlist, built with MJML and automated through a live Klaviyo flow. Part of the broader [Aura Coffee waitlist landing page](https://github.com/saramx-dev/aura-coffee) project.
 
 ---
 
