@@ -1,0 +1,207 @@
+<mjml lang="en">
+  <mj-head>
+    <!-- ============================================
+         METADATA — title, preview text (inbox display only)
+    ============================================= -->
+    <mj-title>Be First to Taste Our Latest Blend ☕️</mj-title>
+    <mj-preview
+      >Sourcing notes, roast profile, and tasting breakdown — coming
+      soon.</mj-preview
+    >
+
+    <!-- ============================================
+         FONTS — imported for clients that support @font-face
+    ============================================= -->
+    <mj-font
+      name="Fraunces"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&display=swap"
+    />
+    <mj-font
+      name="DM Sans"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
+    />
+
+    <!-- ============================================
+         DEFAULT ATTRIBUTES — base styles applied to every
+         matching tag, so individual elements don't repeat them
+    ============================================= -->
+    <mj-attributes>
+      <mj-all font-family="DM Sans, sans-serif" padding="0px" />
+      <mj-text
+        color="#2c1a14"
+        font-size="16px"
+        font-weight="400"
+        line-height="1.6"
+      />
+      <mj-section background-color="#f7f3ee" padding="24px 16px" />
+    </mj-attributes>
+
+    <!-- ============================================
+         DARK MODE — LAYER 1: client support signals
+    ============================================= -->
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+
+    <!-- ============================================
+         DARK MODE — LAYER 2: prefers-color-scheme overrides
+    ============================================= -->
+    <mj-style>
+      /* Logo swap: default (light mode) state */ .logo-dark { display: block
+      !important; } .logo-light { display: none !important; } @media
+      (prefers-color-scheme: dark) { /* Logo swap: dark mode state */ .logo-dark
+      { display: none !important; } .logo-light { display: block !important; }
+      /* Main Body Backgrounds — Targets wrapper, tables, cells, and outlook
+      hacks */ div.dark-bg, .dark-bg table, .dark-bg td{ background: #1f1f1f
+      !important; background-color: #1f1f1f !important; } /* Footer Specific
+      Background — Locks footer to dark brown style */ div.footer-dark-bg,
+      .footer-dark-bg table, .footer-dark-bg td { background: #3d2419
+      !important; background-color: #3d2419 !important; } /* Text colors —
+      target inner div tags */ .dark-text div { color: #f7f3ee !important; }
+      .dark-headline div { color: #6b9b7d !important; } .dark-caption div {
+      color: #d1c9c0 !important; } } /*
+      ============================================ DARK MODE — LAYER 3:
+      Outlook.com web overrides ============================================= */
+      [data-ogsb] div.dark-bg, [data-ogsb] .dark-bg table, [data-ogsb] .dark-bg
+      td{ background: #1f1f1f !important; background-color: #1f1f1f !important;
+      } [data-ogsb] div.footer-dark-bg, [data-ogsb] .footer-dark-bg table,
+      [data-ogsb] .footer-dark-bg td { background: #3d2419 !important;
+      background-color: #3d2419 !important; } [data-ogsc] .dark-text div {
+      color: #f7f3ee !important; } [data-ogsc] .dark-headline div { color:
+      #6b9b7d !important; } [data-ogsc] .dark-caption div { color: #d1c9c0
+      !important; }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#f7f3ee">
+    <!-- Header/Logo section -->
+    <mj-section css-class="dark-bg">
+      <mj-column>
+        <mj-image
+          src="https://i.ibb.co/CpCb566K/dark-logo.png"
+          css-class="logo-dark"
+          width="120px"
+          align="left"
+          alt="Aura Coffee"
+        />
+        <mj-image
+          src="https://i.ibb.co/tMMSb9Sn/light-logo.png"
+          css-class="logo-light"
+          width="120px"
+          align="left"
+          alt="Aura Coffee"
+        />
+      </mj-column>
+    </mj-section>
+
+    <!-- Headline block -->
+    <mj-section css-class="dark-bg">
+      <mj-column>
+        <mj-text css-class="dark-text" font-size="18px" padding="8px 0 0 0">
+          Hi {{ first_name|default:'there' }},
+        </mj-text>
+        <mj-text
+          css-class="dark-caption"
+          color="#7a5040"
+          font-size="13px"
+          letter-spacing="0.05em"
+          text-transform="uppercase"
+        >
+          Welcome To Aura
+        </mj-text>
+        <mj-text
+          css-class="dark-headline"
+          color="#1E3B27"
+          font-family="Fraunces, sans-serif"
+          font-weight="700"
+          font-size="32px"
+        >
+          From our farmer to your inbox.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Body text section -->
+    <mj-section css-class="dark-bg">
+      <mj-column>
+        <mj-text css-class="dark-text">
+          You're on the Aura Coffee waitlist. Before this season's batch
+          releases, we'll send you the sourcing notes, roast profile, and
+          tasting breakdown — before anyone else sees it.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Sign-off section -->
+    <mj-section css-class="dark-bg">
+      <mj-column>
+        <mj-text css-class="dark-text" padding="0 0 4px 0">
+          Talk soon,
+        </mj-text>
+        <mj-text css-class="dark-text" font-weight="600">
+          — Aura Coffee
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer Section with isolated footer-dark-bg tracking class -->
+    <mj-section
+      background-color="#3d2419"
+      padding="32px 24px 24px 24px"
+      css-class="footer-dark-bg"
+    >
+      <mj-column>
+        <mj-divider
+          border-width="1px"
+          border-style="solid"
+          border-color="#b8b6b4"
+          padding="0px 0px 16px 0px"
+        />
+        <mj-text
+          css-class="dark-text"
+          align="center"
+          font-size="16px"
+          color="#f7f3ee"
+        >
+          Aura Coffee
+        </mj-text>
+        <mj-text
+          css-class="dark-text"
+          align="center"
+          font-size="13px"
+          color="#f7f3ee"
+        >
+          © 2026 Aura Coffee. All rights reserved.
+        </mj-text>
+        <mj-spacer height="16px" />
+        <mj-text
+          css-class="dark-text"
+          align="center"
+          font-size="13px"
+          color="#f7f3ee"
+        >
+          Aura Coffee is a design & development portfolio project.
+        </mj-text>
+        <mj-spacer height="16px" />
+        <mj-text
+          css-class="dark-text"
+          align="center"
+          font-size="13px"
+          color="#f7f3ee"
+        >
+          You're receiving this email because you joined the Aura Coffee
+          waitlist.
+        </mj-text>
+        <mj-spacer height="16px" />
+        <mj-text css-class="dark-text" align="center" font-size="13px">
+          <a
+            href="{% unsubscribe_link %}"
+            style="color: #94a3b8; text-decoration: underline"
+            >Unsubscribe</a
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
